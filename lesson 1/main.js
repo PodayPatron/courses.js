@@ -2,240 +2,186 @@
 console.log('==Task 1==');
 
 function strToArray(param) {
-
 	return param.split();
 }
 
-var result = strToArray('Lorem ipsum dolor sit amet consectetur');
-console.log(result);
+console.log(strToArray('Lorem ipsum dolor sit amet consectetur'));
 
 // 2
 console.log('==Task 2==');
 
-function strTolenght(param) {
-
+function countLenght(param) {
 	return param.length;
 }
 
-var resultLength = strTolenght('Lorem ipsum dolor sit amet consectetur');
-console.log(resultLength);
-
+console.log(countLenght('Lorem ipsum dolor sit amet consectetur'));
 
 // 3
 console.log('==Task 3==');
 
-
-function strWithLine(stringToSplit, separator) {
-
-	var arrayOfStrings = stringToSplit.split(separator);
-	console.log(arrayOfStrings.join('/'));
+function symbReplace(string) {
+	return string.replace(/ /g, '-');
 }
 
-var tempestString = 'Lorem ipsum dolor sit amet consectetur';
-var space = ' ';
-strWithLine(tempestString, space);
+console.log(symbReplace('Lorem ipsum dolor sit amet consectetur'));
 
 // 4
 console.log('==Task 4==');
 
-function ucFirstAllWords(str) {
+function FirstBigWord(string) {
+	let array = string.split(' ');
+	for (let i = 0; i < array.length; i++) {
+		array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1).toLowerCase();
+	}
 
-    var pieces = str.split(" ");
-    for ( var i = 0; i < pieces.length; i++ ) {
-
-        var j = pieces[i].charAt(0).toUpperCase();
-        pieces[i] = j + pieces[i].substr(1).toLowerCase();
-    }
-
-    return pieces.join(" ");
+	return array.join(' ');
 }
 
-console.log(ucFirstAllWords('Lorem ipsum dolor sit amet consectetur'));
+console.log(FirstBigWord('Lorem ipsum dolor sit amet consectetur'));
 
 // 5 
 console.log('==Task 5==');
 
-function valueCompare(param1, param2) {
-	
-	return param1.toUpperCase == param2.toUpperCase;
+function valueCompare(string1, string2) {
+	return string1.toUpperCase === string2.toUpperCase;
 }
 
-let firstStr = 'Lorem Lpsum Dolor Sit Amet Consectetur'
-let secondStr = 'lorem ipsum dolor sit amet consectetur'
-
-console.log(valueCompare(firstStr, secondStr));
+console.log(valueCompare('Lorem Lpsum Dolor Sit Amet Consectetur', 'lorem ipsum dolor sit amet consectetur'));
 
 // 6
 console.log('==Task 6==');
 
-let strForSearch = 'Lorem Lpsum Dolor Sit Amet Consectetur'
-let word = 'Lorem'
-
-function searchingWord(param1, searchWord) {
-
-	return param1.toUpperCase().indexOf(searchWord.toUpperCase());
+function searchingString(string, searchWord) {
+	return string.toUpperCase().indexOf(searchWord.toUpperCase());
 }
 
-console.log(searchingWord(strForSearch, word));
-
-
+console.log(searchingString('Lorem Lpsum Dolor Sit Amet Consectetur', 'Lorem'));
 
 // 7
 console.log('==Task 7==');
 
+function camelize(string) {
+	let array = string.split(' ');
+	for (let i = 0; i < array.length; i++) {
+		array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1).toLowerCase();
+	}
 
-function camelize(str) {
-	return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-		return index === 0 ? word.toLowerCase() : word.toUpperCase();
-	}).replace(/\s+/g, '');
+	return array.join(' ').charAt(0).toLowerCase() + array.join('').slice(1);
 }
 
-console.log(camelize("Lorem  dolor sit amet consectetur"));
+console.log(camelize('Lorem dolor sit amet consectetur'));
 
 // 8
 console.log('==Task 8==');
 
-function splitSnake(stringToSnake, param) {
-	var arrayOfSnake = stringToSnake.split(param);
-	return arrayOfSnake.join('_');
+function splitSnake(param) {
+	return param.replace(/ /g, '_');
 }
 
-var tempSnake = 'Lorem ipsum dolor sit amet consectetur';
-var space = ' ';
-
-console.log(splitSnake(tempSnake, space));
+console.log(splitSnake('Lorem dolor sit amet consectetur'));
 
 // 9 
 console.log('==Task 9==');
 
-let mainWord = 'Hooligan'
-let wordNum = 9 ;
-
-var wordRepeat = function (mainWord) {
-	
-	for ( param = 0; param < wordNum; param++) {
+var stringRepeat = function (mainWord, stringNumRepeat) {
+	for (let i = 0; i < stringNumRepeat; i++) {
 		console.log(mainWord);
 	}
 }
 
-wordRepeat(mainWord);
+stringRepeat('String For Repeat', 9);
 
 // 10
 console.log('==Task 10==');
 
-var anyString = 'Lorem ipsum - dolor sit amet a consectetur';
-var symb = '-'
-
-function wordsToSymbol(param, symbb) {
-
-	console.log(param.substring(0, param.indexOf(symb)));
+function wordsToSymbol(string, symb = '-') {
+	return string.substring(0, string.indexOf(symb))
 }
 
-wordsToSymbol(anyString, symb);
+console.log(wordsToSymbol('Lorem ipsum - dolor sit amet a consectetur'));
 
 // 11
 console.log('==Task 11==');
 
-var anyStringForLesson11 = 'Loreme'
-
-function returnArrays(param) {
-	
-	let result11 = param.split('').length;
-
-	let num1 = 0,
-	    num2 = 3;
-
-	for (let i = num2; i <= result11; i += num2) {
-		console.log(anyStringForLesson11.substr(num1, num2));
-		num1 = i;
+function returnArrays(param, num) {
+	let result = [];
+	for (let i = 0; i < param.length; i += num) {
+		result.push(param.substr(i, num));
 	}
 
-	if (result11 > num1) {
-		console.log(anyStringForLesson11.substr(num1, num2));
-	}
+	return result;
 }
 
-returnArrays(anyStringForLesson11);
+console.log(returnArrays('Loreme', 3));
 
 // 12 
 console.log('==Task 12==');
 
-
-function strWithLine2(stringToSplit2, separator) {
-
-	var arrayOfStrings2 = stringToSplit2.split(separator);
-	console.log(arrayOfStrings2.join('').length);
+function countOnlyWord(string) {
+	return string.replace(/ /g, '').length;
 }
 
-var tempestString2 = 'Lorem ipsum dolor sit amet consectetur';
-var space2 = ' ';
-strWithLine2(tempestString2, space2);
+console.log(countOnlyWord('Lorem ipsum ipsum'));
 
 // 13
 console.log('==Task 13==');
 
-function stringArray(alfawit) {
-	return alfawit.sort()
+function stringArray(string) {
+	return string.split('').sort().join();
 }
 
-console.log(stringArray(['Голубая', 'Горбатая', 'Белуга']));
+console.log(stringArray('sasha'));
 
 // 14
 console.log('==Task 14==');
 
-var str = "вишня, груша, слива, груша";
-
 function removeDuplicate(str) {
-  str = str.split(",");
-  var result = [];
+	str = str.split(',');
+	var result = [];
 
-  for(var i = 0; i < str.length ; i++) {
-
-		if(result.indexOf(str[i]) == -1) result.push(str[i]);
-
+	for(var i = 0; i < str.length ; i++) {
+		if(-1 === result.indexOf(str[i])) {
+			result.push(str[i]);
 		}
-	return result = result.join(", ");
+	}
+	
+	return result.join(',');
 }
 
-console.log(removeDuplicate(str));
+console.log(removeDuplicate('вишня, груша, слива, груша'));
 
 // 15 
 console.log('==task 15==');
 
-var strLower = "PODAY PATRON";  
 
-function capitalizeLowerCase(str) {
-
-	return str.replace(/(^|\s)\S/g, function(a) {return a.toLowerCase()})
-
+function capitalizeLowerCase(string) {
+	let array = string.split(' ');
+	for (let i = 0; i < array.length; i++) {
+		array[i] = array[i].charAt(0).toLowerCase() + array[i].slice(1).toUpperCase();
+	}
+	
+	return array.join(' ');
 }
 
-console.log(capitalizeLowerCase(strLower));
+console.log(capitalizeLowerCase("PODAY PATRON"));
 
 // 16
 console.log('==Task 16==');
 
-var type = 'str'
-
-function valueType(param) {
-
+function typeOfParams(param) {
 	return typeof(param);
 }
 
-console.log(valueType(type));
+console.log(typeOfParams('Hello'));
 
 // 17
 console.log('==task 17==');
 
-const array1 = ['lorem', 'loreeem', 'lor', 'loooooorrremmmm', 'lora'];
-
 function longestString (someArray) {
-    return someArray.sort(function (a, b) { 
-			return b.length - a.length; 
-		})[0];
+	
 }
 
-console.log(longestString(array1));
+console.log(longestString(''));
 
 // 18
 console.log('Task 18');
