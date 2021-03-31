@@ -177,29 +177,110 @@ console.log(typeOfParams('Hello'));
 // 17
 console.log('==task 17==');
 
-function longestString (someArray) {
-	
+function longestString (someString, lgth = 0) {
+	let arr = someString.split(' ');
+	let longest;
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i].length > lgth) {
+			var lgth = arr[i].length;
+			longest = arr[i];
+		}
+	}
+
+	return longest;
 }
 
-console.log(longestString(''));
+console.log(longestString('Bully, Mache, Akuna, Matatatatata, Alisherka, krug'));
 
 // 18
-console.log('Task 18');
+console.log('==Task 18==');
 
-function findLongestWord (input) {
-	return input
-		.split(/\W+/)
-		.reduce(
-		function (longest, word) {
-			return word.length > longest.length
-				? word
-				: longest;
-		},'');
+function findLongestWord(string, lgth = 0) {
+	let arr = string.split(' ');
+	let longestWord;
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i].length > lgth) {
+			var lgth = arr[i].length;
+			longestWord = arr[i];
+		}
+	}
+
+	return longestWord.toLowerCase();
 }
-  
-  console.log(findLongestWord('aaa, aromatDUSHI, HALA MADRID, lormDoremAokozay'));
+
+  console.log(findLongestWord('aaa, segodnya, horoshaya, LONgestWord'));
 
 
 // 19
-console.log('task 19');
+console.log('==task 19==');
 
+function countWordInString(string) {
+	return string.split(' ').length;
+}
+
+console.log(countWordInString('hello, robert, sakura, dog, cat'));
+
+// 20
+console.log('==task 20==');
+
+function reverseDate(date) {
+	return date.split('-').reverse().join('.')
+}
+
+console.log(reverseDate('31-12-2030'));
+
+// 21
+console.log('==task 21==');
+
+function retrnArray(array1, array2) {
+	return array1.concat(array2);
+}
+
+console.log(retrnArray(['hello, robert, sakura, dog, cat'], ['hello2, robert2, sakura2, dog2, cat2']));
+
+// 22
+console.log('==task 22==');
+
+function addElemToEnd(array, el = 'robert2') {
+	array.push(el)
+	return array;
+}
+
+console.log(addElemToEnd(['hello', 'robert', 'sakura', 'dog', 'cat']));
+
+// 23
+console.log('==task 23==');
+
+function reversArray(array) {
+	return array.reverse();
+}
+
+console.log(reversArray(['hello', 'robert', 'sakura', 'dog', 'cat']));
+
+// 24
+console.log('==task 24==');
+
+function deleteElement(array) {
+	return array.splice(0, 3)
+}
+
+console.log(deleteElement(['hello', 'robert', 'sakura', 'dog', 'cat']));
+
+// 25
+console.log('==task 25==');
+
+function howManyOld(birthday) {
+	const birthdayDate = new Date(birthday.split('.').reverse().join('.'));
+	let today = new Date();
+	let result = today.getYear() - birthdayDate.getYear();
+
+	if (today.getMonth() < birthdayDate.getMonth()) {
+		result--;
+	}
+
+	return result;
+}
+
+console.log(howManyOld('17.06.1956'));
