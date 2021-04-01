@@ -106,11 +106,89 @@ $btnShowImg.addEventListener('click', function() {
 
 var $ShowImgHover = document.getElementsByClassName('main-img-hover')[0];
 $ShowImgHover.addEventListener('mouseover', function() {
-	document.getElementsByClassName('main-img-hover')[0].style.display = 'none';
+	$ShowImgHover.src = './2.jpg';
 });
 $ShowImgHover.addEventListener('mouseout', function() {
-	document.getElementsByClassName('main-img-hover2')[0].style.display = 'block';
+	$ShowImgHover.src = './1.png';
 });
 
 
+//====
+// =======> 12
+//====
 
+var $btnShowInput = document.getElementsByClassName('button-show-input')[0];
+var $btnClose = document.getElementsByClassName('button-close-input')[0];
+$btnClose.addEventListener('click', function() {
+	document.getElementsByClassName('input-show')[0].style.display = 'none';
+});
+$btnShowInput.addEventListener('click', function() {
+	document.getElementsByClassName('input-show')[0].style.display = 'block';
+});
+
+//====
+// =======> 13
+//====
+
+var $btnChangeStyle = document.getElementsByClassName('button-change-style')[0];
+$btnChangeStyle.addEventListener('click', function() {
+	document.getElementsByClassName('input-size')[0].style.width = '600px';
+	document.getElementsByClassName('input-size')[0].style.color = 'red';
+});
+
+//====
+// =======> 14
+//====
+
+var clicks = 0;
+var $btnChangeCount = document.getElementsByClassName('button-counter')[0];
+$btnChangeCount.addEventListener('click', function() {
+        clicks++;
+        document.getElementsByClassName('button-counter')[0].innerHTML = clicks;
+});
+
+//====
+// =======> 15
+//====
+
+var $btnShowClass = document.getElementsByClassName('button-all-class')[0];
+$btnShowClass.addEventListener('click', function() {
+	$btnShowClass.innerHTML = document.getElementsByClassName('input-all-class')[0].className ;
+});
+
+//====
+// =======> 16
+//====
+
+var $contactBtn = document.getElementsByClassName('contact-btn')[0];
+$contactBtn.addEventListener('click', function() {
+	let checkInp = document.getElementsByClassName('inp-name')[0].value;
+	let checkInp2 = document.getElementsByClassName('inp-name')[1].value;
+	let checkInp3 = document.getElementsByClassName('inp-name')[2].value;
+	let checkInp4 = document.getElementsByClassName('inp-name')[3].value;
+	let checkInp5 = document.getElementsByClassName('inp-name')[4].value;
+
+
+	alert('імя: ' + checkInp + '\nфамілія: ' + checkInp2 + '\nрік нароження: ' + checkInp3+ '\nномер тел: ' + checkInp4 + '\nмісце проживаня: ' + checkInp5 );
+});
+
+//====
+// =======> 17
+//====
+
+
+
+
+
+//====
+// =======> 19
+//====
+
+var $btnOpenPop = document.getElementsByClassName('button-open-pop')[0];
+var $btnPopClose = document.getElementsByClassName('popup-close')[0];
+$btnOpenPop.addEventListener('click', function() {
+	document.getElementsByClassName('pop-wrap')[0].style.display = 'block';
+});
+$btnPopClose.addEventListener('click', function() {
+	document.getElementsByClassName('pop-wrap')[0].style.display = 'none';
+});
