@@ -1,0 +1,266 @@
+@import url(./bootstrap-grid.css);
+@import url(./reset.css);
+
+@font-face {
+    font-family: 'myriad pro';
+    src: url("../fonts/MyriadPro-Regular.ttf");
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+.fa-search {
+    margin-left: 25px;
+    margin-right: 25px; 
+    color: #fff;
+}
+
+
+
+
+/*  questing */
+.answers {
+    margin-bottom: 160px;
+}
+.quest-inner {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 24px; */
+
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: #f6f6f9;
+    
+    margin-bottom: 30px;
+}
+
+.flex-acord {
+    display: flex;
+    justify-content: space-between;
+}
+.acor {
+    background-color: #eee;
+}
+.fa-plus {
+    color: #48475d;
+    font-size: 20px;
+}
+.active-plus {
+    transform: rotate(45deg);
+}
+
+.accordion,
+.accordion2 {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+.accordion-item,
+.accordion-item2 {
+    background-color: #fff;
+    color: #111;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+}
+.accordion-item-header,
+.accordion-item-header2 {
+    padding: 20px;
+    min-height: 88px;
+    line-height: 1.25rem;
+    font-weight: bold;
+    background-color: #f6f6f9;
+    display: flex;
+    align-items: center;
+    
+    font-size: 18px;
+}
+
+.accordion-item-header::after,
+.accordion-item-header2::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.accordion-item-header.active::after,
+.accordion-item-header2.active::after {
+    content: "\2212";
+}
+
+
+.accordion-item-body,
+.accordion-item-body2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+
+.accordion-item-header2.active .accordion-item-body2 {
+    max-height: 200px;
+}
+
+.accordion-item-body-content,
+.accordion-item-body-content2 {
+    padding: 1rem;
+    line-height: 1.5rem;
+    background-color: #f6f6f9;
+    border-top: 1px solid #f6f6f9;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+.aco-header,
+.aco-header2  {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+
+
+
+
+
+@media(max-width:990px) {
+    .img-inner {
+        margin-top: -39px;
+        margin-left: 50px;
+    }
+    .kard-subtitle {
+        bottom: 150px;
+    }
+
+    .kard-title {
+        font-size: 24px;
+        bottom: 34px;
+
+    }
+}
+@media(max-width:880px) {
+    .main-title {
+        font-size: 60px;
+    }
+    .btn {
+        padding: 15px 30px;
+    }
+    .menu {
+        display: none;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    .intro {
+        margin-bottom: 30px;
+    }
+    .account-logo{
+        
+    }
+}
+
+@media(max-width:760px) {
+    .img-inner {
+        margin-top: -26px;
+        margin-left: 20px;
+    }
+    .coments-right:after,
+    .coments-left:before {
+       display: none;
+   }
+
+}
+
+@media(max-width: 690px) {
+    .main-title {
+        font-size: 50px;
+    }
+    .menu-footer {
+        margin-bottom: 40px;
+    }
+    .footer-form {
+        margin: 0 auto;
+    }
+    .block-title  {
+        text-align: center;
+    }
+    .story-suptitle {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:540px) {
+    .main-title {
+        font-size: 35px;
+    }
+
+}
+
+@media(max-width:360px) {
+    .kard-title {
+        font-size: 19px;
+    }
+    .kard-subtitle {
+        bottom: 125px;
+    }
+}
+
+@media(max-width:320px) {
+    .kard-title {
+        font-size: 16px;
+    }
+
+    .kard-subtitle {
+        bottom: 115px;
+        font-size: 13px;
+    }
+}
