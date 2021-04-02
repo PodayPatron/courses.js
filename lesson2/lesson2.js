@@ -176,7 +176,17 @@ $contactBtn.addEventListener('click', function() {
 // =======> 17
 //====
 
+var $checkPass = document.getElementsByClassName('button-check-pass')[0];
+var $inpTextPass = document.getElementsByClassName('input-pass')[0];
+var $inpTextPass2 = document.getElementsByClassName('input-pass2')[0];
+$checkPass.addEventListener('click', function() {
 
+	if ($inpTextPass.value !== $inpTextPass2.value) {
+		alert('Eror');
+	} else {
+		alert('Вы зареестрованы');
+	}
+});
 
 
 
