@@ -16,7 +16,8 @@
 }
 
 .tabs-header__item.active {
-	border-color: red;
+	background-color: red;
+	color: #fff;
 }
 
 .tabs-content {
