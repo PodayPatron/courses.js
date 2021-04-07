@@ -1,5 +1,4 @@
 
-
 const accordionItemHeaders = document.getElementsByClassName('accordion-item-header');
 var i;
 
