@@ -1,2 +1,2 @@
 # Projects
-[Github Pages Link](https://podaypatron.github.io/courses/)
+[Github Pages JS ](https://podaypatron.github.io/courses.js/)
