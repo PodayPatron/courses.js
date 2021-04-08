@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  padding: 30px 15px;
+  font-size: 16px;
+
+  background: linear-gradient(
+  to right top,
+  #65dfc9,
+  #6cbbed);
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+  transition: color .3s ease;
+  display: inline-block;
+}
+
+a:hover {
+  color: #f8e803;
+}
+
+.main-table {
+  width: 100%;
+  max-width: 700px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-top: 1px solid #E6E6E6;
+  border-left: 1px solid #E6E6E6;
+  background-color: #FFF;
+      box-shadow: 0px 0px 15px 10px rgb(0 0 0 / 15%);
+
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1));
+}
+
+td, th {
+  padding: 10px 20px;
+  border-right: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  text-align: center;
+  width: 50%;
+}
+
+th {
+  position: sticky;
+  top: -1px;
+  background-color: #dbdbdb;
+  z-index: 10;
+}
+
+th:first-child,
+td:first-child {
+  width: 15%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 25%;
+}
+
+th:last-child,
+td:last-child {
+  width: 55%;
+}
+
+td a, th a {
+  padding: 0px;
+}
+
+@media (max-width: 600px) {
+  
+  body {
+    font-size: 14px;
+    min-height: auto;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  td {
+    padding: 10px;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 30%;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    display: none;
+  }
+
+  th:last-child,
+  td:last-child {
+    width: 70%;
+  }
+}
+
+.cta {
+  width: 140px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-8 {
+  border: 3px solid transparent;
+  text-align: center;
+  perspective: 100px;
+
+}
+
+.cta-8:hover {
+  border: 3px solid rgb(243, 233, 97);
+  animation-name: cta-8;
+  border-style: ridge;
+  animation-duration: 2s;  
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
+}
+
+@keyframes cta-8 {
+  0% {box-shadow: 0px 0px 10px rgb(233, 132, 132);border-style: inset;opacity:.5}
+  25% {}
+  50% {box-shadow: 0px 0px 30px rgb(122, 74, 74);opacity:1;}
+  75% {}
+  100% {box-shadow: 0px 0px 10px rgb(146, 22, 22);opacity:.5}
+}
