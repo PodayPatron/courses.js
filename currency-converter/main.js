@@ -3,7 +3,6 @@
 		var select = $('select');
 		var input = $('input');
 		var key = '2d46c190824f3aa154b6fedb0a718e26';
-		var html = '';
 
 		function getCurrencies() {
 			$.ajax({
