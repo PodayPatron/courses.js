@@ -91,6 +91,22 @@
 			});
 		}
 
+		function inputSearch() {
+			$(document).on('keyup', '.search-input', function(e) {
+				e.preventDefault();
+				var searchInput = $('.search-input').val();
+
+				if(searchInput.lenght >= 3) {
+					$.ajax({
+						url: `http://api.openweathermap.org/data/2.5/find?q=${searchInput}&lang=ua&appid=${key}`,
+						success: function (data) {
+							console.log(data);
+						}
+					});
+				}
+			});
+		}
+
 		toFuhrengeit();
 		btnSearchCity();
 	});
