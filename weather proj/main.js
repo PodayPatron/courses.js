@@ -82,7 +82,7 @@
 							if(0 !== data.count) {
 								for (let i = 0; i < data.count; i++) {
 									$('.input-drop').append(`
-									<span class="input-drop-item" data-id="${data.list[0].id}">${data.list[0].name}</span>
+									<span class="input-drop-item" data-id="${data.list[i].id}">${data.list[i].name}</span>
 									`);
 								}
 							}
