@@ -139,7 +139,6 @@
 			$('.weather-card').remove();
 		}
 
-//		btnSearchCity();
 		inputSearchCity();
 		inputCheckCity();
 	});
