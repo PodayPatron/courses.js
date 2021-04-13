@@ -1,13 +1,12 @@
 (function($) {
 	$(document).ready(function() {
-		const key = 'a5ca0d8b861498009805494e3cfe3d61';
-		const kelvin = 273;
-		var fahren = $('.celsius').val();
+		var key = 'a5ca0d8b861498009805494e3cfe3d61';
 
 		function setPosition(position){
 			let latitude = position.coords.latitude;
 			let longitude = position.coords.longitude;
 			getWeather(latitude, longitude);
+			tempBtn(latitude, longitude);
 		}
 		navigator.geolocation.getCurrentPosition(setPosition);
 
@@ -27,7 +26,7 @@
 								<img src="./icons/${data.weather[0].icon}.png"/>
 							</div>
 							<div class="temperature-value">
-								<p class="celsius">${Math.floor(data.main.temp - kelvin)}°<span>C</span></p>
+								<p class=".celsius">${Math.floor(data.main.temp - 273)}°<span>C</span></p>
 							</div>
 							<div class="temperature-description">
 								<p>${data.weather[0].description}</p>
@@ -41,20 +40,35 @@
 			});
 		}
 
-		function toFuhrengeit() {
-			$(document).on('click', '.temperature-value', function() {
-				var fuhrenNum = function celsiusToFahrenheit(temp){
-					return (temp * 9/5) + 32;
-				}
-				var fuhrenResult = fuhrenNum(fahren);
-	
-				if($(this).find('.celsius')){
-					$(this).text(' ').append(
-						`<p class="fahrengeit">${fuhrenResult}°<span>F</span></p>`
-					);
-				} 
+		function tempBtn(latitude, longitude) {
+			function celsiusToFahrenheit(temperature){
+				return (temperature * 9/5) + 32;
+			}
+
+			$(document).on('click', '.temperature-value', function(){
+				var tempElement = $('.temperature-value p');
+				
+				$.ajax({
+					url: `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ua&appid=${key}`,
+					success: function (data) {
+
+						if($('.temperature-value p').hasClass('.celsius')){
+							let fahrenheit = celsiusToFahrenheit(Math.floor(data.main.temp - 273));
+							fahrenheit = Math.floor(fahrenheit);
+							
+							tempElement.removeClass('.celsius');
+							tempElement.html(`${fahrenheit}°<span>F</span>`);
+							tempElement.addClass(".fahrenheit");
+						}else{
+							tempElement.removeClass(".fahrenheit");
+							tempElement.html(`${Math.floor(data.main.temp - 273)}°<span>C</span>`);
+							tempElement.addClass(".celsius");
+						}
+					}
+				});
 			});
 		}
+
 
 		function btnSearchCity() {
 			$(document).on('click', '.search-btn', function(e) {
@@ -76,7 +90,7 @@
 									<img src="./icons/${data.weather[0].icon}.png"/>
 								</div>
 								<div class="temperature-value">
-									<p class="celsius">${Math.floor(data.main.temp - kelvin)}°<span>C</span></p>
+									<p class="celsius">${Math.floor(data.main.temp - 273)}°<span>C</span></p>
 								</div>
 								<div class="temperature-description">
 									<p>${data.weather[0].description}</p>
@@ -94,11 +108,11 @@
 		function inputSearch() {
 			$(document).on('keyup', '.search-input', function(e) {
 				e.preventDefault();
-				var searchInput = $('.search-input').val();
+				var $searchInput = $('.search-input').val();
 
-				if(searchInput.lenght >= 3) {
+				if(3 <=  $searchInput.length) {
 					$.ajax({
-						url: `http://api.openweathermap.org/data/2.5/find?q=${searchInput}&lang=ua&appid=${key}`,
+						url: `http://api.openweathermap.org/data/2.5/find?q=${$searchInput}&lang=ua&appid=${key}`,
 						success: function (data) {
 							console.log(data);
 						}
@@ -107,7 +121,7 @@
 			});
 		}
 
-		toFuhrengeit();
 		btnSearchCity();
+		inputSearch();
 	});
 })(jQuery);
