@@ -29,6 +29,8 @@ html {
 }
 
 .input-drop {
+  position: absolute;
+  top: 83px;
   display: flex;
   flex-direction: column;
   width: 550px;

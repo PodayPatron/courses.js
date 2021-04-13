@@ -14,7 +14,7 @@
 			$.ajax({
 				url: `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ua&appid=${key}`,
 				success: function (data) {
-					$('.weather-card').remove();
+					cardRemove();
 					$('.wrapper-card').append(
 					`<div class="weather-card">
 						<div class="app-title">
@@ -69,16 +69,42 @@
 			});
 		}
 
-
-		function btnSearchCity() {
-			$(document).on('click', '.search-btn', function(e) {
+		function inputSearchCity() {
+			$(document).on('keyup', '.search-input', function(e) {
 				e.preventDefault();
-				var valueInput = $('.search-input').val();
-	
+				var $searchInput = $('.search-input').val();
+
+				if(3 <=  $searchInput.length) {
+					$.ajax({
+						url: `http://api.openweathermap.org/data/2.5/find?q=${$searchInput}&lang=ua&appid=${key}`,
+						success: function (data) {
+							remove();
+							if(0 !== data.count) {
+								for (let i = 0; i < data.count; i++) {
+									$('.input-drop').append(`
+									<span class="input-drop-item" data-id="${data.list[0].id}">${data.list[0].name}</span>
+									`);
+								}
+							}
+						}
+					});
+				} else {
+					remove();
+				}
+			});
+		}
+
+		function inputCheckCity() {
+			$(document).on('click', '.input-drop-item', function(e) {
+				e.preventDefault();
+				var $input = $('.input-drop-item');
+				var id = $input.data('id')
+				remove();
+
 				$.ajax({
-					url: `http://api.openweathermap.org/data/2.5/weather?q=${valueInput}&lang=ua&appid=${key}`,
+					url: `http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${key}`,
 					success: function (data) {
-						$('.weather-card').remove();
+						cardRemove();
 						$('.wrapper-card').append(
 						`<div class="weather-card">
 							<div class="app-title">
@@ -105,23 +131,16 @@
 			});
 		}
 
-		function inputSearch() {
-			$(document).on('keyup', '.search-input', function(e) {
-				e.preventDefault();
-				var $searchInput = $('.search-input').val();
-
-				if(3 <=  $searchInput.length) {
-					$.ajax({
-						url: `http://api.openweathermap.org/data/2.5/find?q=${$searchInput}&lang=ua&appid=${key}`,
-						success: function (data) {
-							console.log(data);
-						}
-					});
-				}
-			});
+		function remove() {
+			$('.input-drop-item').remove();
 		}
 
-		btnSearchCity();
-		inputSearch();
+		function cardRemove() {
+			$('.weather-card').remove();
+		}
+
+//		btnSearchCity();
+		inputSearchCity();
+		inputCheckCity();
 	});
 })(jQuery);
