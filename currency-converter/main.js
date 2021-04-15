@@ -29,16 +29,19 @@
 					$('.time').text(time);
 					$('.usd').append('1$ - ' + `${data.quotes.USDUAH.toLocaleString()}` + ' UAN');
 
-					$(document).on('keyup', $baseNumber, function() {
+					$(document).on('keyup', '#baseNumber', function() {
 						$targetNumber.val($baseNumber.val() * rates['USD' + $selectTarget.val()] / rates['USD' + $selectBase.val()]);
 					});
-					$(document).on('keyup',$targetNumber, function() {
+
+					$(document).on('keyup', '#targetNumber', function() {
 						$baseNumber.val($targetNumber.val() * rates['USD' + $selectBase.val()] / rates['USD' + $selectTarget.val()]);
 					});
-					$(document).on('change', $selectBase, function() {
+
+					$(document).on('change', '#base', function() {
 						$targetNumber.val($baseNumber.val() * rates['USD' + $selectTarget.val()] / rates['USD' + $selectBase.val()]);
 					});
-					$(document).on('change', $selectTarget, function() {
+
+					$(document).on('change', '#target', function() {
 						$baseNumber.val($targetNumber.val() * rates['USD' + $selectBase.val()] / rates['USD' + $selectTarget.val()]);
 					});
 				}
