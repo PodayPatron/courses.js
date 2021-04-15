@@ -12,6 +12,7 @@
 				url: `http://apilayer.net/api/list?access_key=${key}`,
 				success: function (data) {
 					var arrKeys = data.currencies;
+					data.currencies['APL'] = 'Iphone 12';
 
 					for(let item in arrKeys) {
 						$select.append( `<option value=${item}>${arrKeys[item]}</option>`)
@@ -24,6 +25,7 @@
 			$.ajax({
 				url: `http://api.currencylayer.com/live?access_key=${key}`,
 				success: function (data) {
+					data.quotes['USDAPL'] = 0.0012515644555695;
 					var rates = data.quotes;
 					let time = new Date(data.timestamp * 1000).toLocaleString();
 					$('.time').text(time);
