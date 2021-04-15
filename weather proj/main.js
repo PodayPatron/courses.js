@@ -46,7 +46,7 @@
 			}
 
 			$(document).on('click', '.temperature-value', function(){
-				var tempElement = $('.temperature-value p');
+				var tempElement = $(this).find('p');
 				
 				$.ajax({
 					url: `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ua&appid=${key}`,
@@ -59,7 +59,7 @@
 							tempElement.removeClass('.celsius');
 							tempElement.html(`${fahrenheit}°<span>F</span>`);
 							tempElement.addClass(".fahrenheit");
-						}else{
+						}else {
 							tempElement.removeClass(".fahrenheit");
 							tempElement.html(`${Math.floor(data.main.temp - 273)}°<span>C</span>`);
 							tempElement.addClass(".celsius");
@@ -72,7 +72,7 @@
 		function inputSearchCity() {
 			$(document).on('keyup', '.search-input', function(e) {
 				e.preventDefault();
-				var $searchInput = $('.search-input').val();
+				var $searchInput = $(this).val();
 
 				if(3 <=  $searchInput.length) {
 					$.ajax({
@@ -97,7 +97,7 @@
 		function inputCheckCity() {
 			$(document).on('click', '.input-drop-item', function(e) {
 				e.preventDefault();
-				var $input = $('.input-drop-item');
+				var $input = $(this);
 				var id = $input.data('id')
 				remove();
 
