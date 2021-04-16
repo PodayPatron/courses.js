@@ -1808,6 +1808,33 @@ small {
 	}
 }
 
+.arrow-mini {
+	--swiper-navigation-size: 15px;
+	outline: 0;
+}
+
+.sw-arr-right,
+.sw-arr-left {
+	--swiper-navigation-size: 22px ;
+	outline: 0;
+}
+
+.sw-arr-right {
+	right: 0;
+}
+
+.sw-arr-left {
+	left: 0;
+}
+
+.tabs-item {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
 // ------------------------------------------------------------------------------------------------
 // MEDIA
 // ------------------------------------------------------------------------------------------------

@@ -248,7 +248,7 @@
 		<div class="container">
 
 			<div class="swiper-container-style">
-				<div class="swiper-container">
+				<div class="swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 1}'>
 					<div class="swiper-wrapper">
 						<div class="slider-product swiper-slide">
 							<div class="img-inner-block color-scheme-light">
@@ -365,16 +365,16 @@
 					</h2>
 				</div>
 				<ul class="tabs-menu">
-					<li class="active"><a href="#">All</a></li>
-					<li><a href="#">New</a></li>
-					<li><a href="#">Bestseller</a></li>
-					<li><a href="#">Discount</a></li>
+					<li class="active" data-tab="1"><a href="#">All</a></li>
+					<li data-tab="2"><a href="#">New</a></li>
+					<li data-tab="3"><a href="#">Bestseller</a></li>
+					<li data-tab="4"><a href="#">Discount</a></li>
 				</ul>
 			</div>
 
 			<div class="row">
 				<!--ITEM 1-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item active" data-tab="1">
 					<div class="product-wrapper">
 						
 						<div class="img-wrapper">
@@ -411,7 +411,7 @@
 					</div>
 				</div>
 				<!--ITEM 2-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item active" data-tab="1">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -442,7 +442,7 @@
 					</div>
 				</div>
 				<!--ITEM 3-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item active" data-tab="1">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -481,7 +481,7 @@
 					</div>
 				</div>
 				<!--ITEM 4-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item" data-tab="2">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -512,7 +512,7 @@
 					</div>
 				</div>
 				<!--ITEM 5-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item" data-tab="2">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -543,7 +543,7 @@
 					</div>
 				</div>
 				<!--ITEM 6-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item" data-tab="2">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -574,7 +574,7 @@
 					</div>
 				</div>
 				<!--ITEM 7-->
-				<div class="col-lg-3">
+				<div class="col-lg-3  tabs-item" data-tab="3">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -605,7 +605,7 @@
 					</div>
 				</div>
 				<!--ITEM 8-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 tabs-item" data-tab="3">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -725,8 +725,8 @@
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1">
-					<div class="category-wrap">
-						<a href="#"></a>
+					<div class="category-wrap ">
+
 						<div class=" categ-img-inner-block">
 							<div class="block-title categ-block-title-inner">
 								<div class="main-subtitle categ-main-subtitle-inner">
@@ -741,7 +741,22 @@
 								<a class="btn btn-mini-long" href="#">To Shop</a>
 							</div>
 						</div>
-						<img src="./img/merak-banner-img-2.jpg" alt="">
+
+						<div class="swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 1}'>
+							<div class="swiper-wrapper">
+
+								<div class="swiper-slide">
+									<img class="full-screen" src="./img/merak-banner-img-2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img class="full-screen" src="./img/merak-banner-img-1.jpg" alt="">
+								</div>
+
+							</div>
+							<div class="swiper-button-next arrow-mini"></div>
+    						<div class="swiper-button-prev arrow-mini"></div>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -765,183 +780,181 @@
 				</p>
 			</div>
 
-			<div class="row arrows custom-row">
-				<div class="arr-left">
-					<i class="far fa-chevron-left"></i>
-				</div>
-				<div class="arr-right">
-					<i class="fal fa-chevron-right"></i>
-				</div>
-				<!--ITEM 1-->
-				<div class="custom-col-20">
-					<div class="product-wrapper">
-						
-						<div class="img-wrapper">
-							<a href="#"></a>
-							<img src="./img/products (compressed)/merak-product-3-0-min.jpg" alt="">
-							<div class="img-inner-block-product">
-								<div class="inner-panel">
-									<button class="respon-btn-plus">+</button>
-									<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
-									
-									<button class="center-icon img-inner-btn ">
-										<i class="fal fa-heart"></i>
-									</button>
-								</div>
-								<img src="./img/products (compressed)/merak-product-3-2-min.jpg" alt="">
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="title-check">
-								<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
-								<div class="check-style little-check">
-	
-								</div>
-								<div class="check-style little-check style-2">
-									
+			<div class="row arrows custom-row swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 5}'>
+				<div class="swiper-button-next sw-arr-right"></div>
+    			<div class="swiper-button-prev sw-arr-left"></div>
+				<div class="swiper-wrapper">
+					<!--ITEM 1-->
+					<div class="custom-col-20 swiper-slide">
+						<div class="product-wrapper">
+							
+							<div class="img-wrapper">
+								<a href="#"></a>
+								<img src="./img/products (compressed)/merak-product-3-0-min.jpg" alt="">
+								<div class="img-inner-block-product">
+									<div class="inner-panel">
+										<button class="respon-btn-plus">+</button>
+										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
+										
+										<button class="center-icon img-inner-btn ">
+											<i class="fal fa-heart"></i>
+										</button>
+									</div>
+									<img src="./img/products (compressed)/merak-product-3-2-min.jpg" alt="">
 								</div>
 							</div>
-							<div class="price-product primary-color">
-								$142.50
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--ITEM 2-->
-				<div class="custom-col-20">
-					<div class="product-wrapper">
-						<div class="img-wrapper">
-							<a href="#"></a>
-							<img src="./img/products (compressed)/merak-product-11-1-min.jpg" alt="">
-							<div class="img-inner-block-product">
-								<div class="inner-panel">
-									<button class="respon-btn-plus">+</button>
-									<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
-									
-									<button class="center-icon img-inner-btn ">
-										<i class="fal fa-heart"></i>
-									</button>
+							<div class="product-text">
+								<div class="title-check">
+									<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
+									<div class="check-style little-check">
+		
+									</div>
+									<div class="check-style little-check style-2">
+										
+									</div>
 								</div>
-								<img src="./img/products (compressed)/merak-product-11-2-min.jpg" alt="">
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="title-check">
-								<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
-								<div class="check-style little-check">
-	
+								<div class="price-product primary-color">
+									$142.50
 								</div>
-								<div class="check-style little-check style-2">
-									
-								</div>
-							</div>
-							<div class="price-product primary-color">
-								$142.50
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--ITEM 3-->
-				<div class="custom-col-20">
-					<div class="product-wrapper">
-						
-						<div class="img-wrapper">
-							<a href="#"></a>
-							<img src="./img/products (compressed)/merak-product-6-0-min.jpg" alt="">
-							<div class="img-inner-block-product">
-								<div class="inner-panel">
-									<button class="respon-btn-plus">+</button>
-									<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
-									
-									<button class="center-icon img-inner-btn ">
-										<i class="fal fa-heart"></i>
-									</button>
-								</div>
-								<img src="./img/products (compressed)/merak-product-6-1-min.jpg" alt="">
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="title-check">
-								<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
-								<div class="check-style little-check">
-	
-								</div>
-								<div class="check-style little-check style-2">
-									
+					<!--ITEM 2-->
+					<div class="custom-col-20 swiper-slide">
+						<div class="product-wrapper">
+							<div class="img-wrapper">
+								<a href="#"></a>
+								<img src="./img/products (compressed)/merak-product-11-1-min.jpg" alt="">
+								<div class="img-inner-block-product">
+									<div class="inner-panel">
+										<button class="respon-btn-plus">+</button>
+										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
+										
+										<button class="center-icon img-inner-btn ">
+											<i class="fal fa-heart"></i>
+										</button>
+									</div>
+									<img src="./img/products (compressed)/merak-product-11-2-min.jpg" alt="">
 								</div>
 							</div>
-							<div class="price-product primary-color">
-								$142.50
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--ITEM 4-->
-				<div class="custom-col-20">
-					<div class="product-wrapper">
-						
-						<div class="img-wrapper">
-							<a href="#"></a>
-							<img src="./img/products (compressed)/merak-product-4-2-min.jpg" alt="">
-							<div class="img-inner-block-product">
-								<div class="inner-panel">
-									<button class="respon-btn-plus">+</button>
-									<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
-									
-									<button class="center-icon img-inner-btn ">
-										<i class="fal fa-heart"></i>
-									</button>
+							<div class="product-text">
+								<div class="title-check">
+									<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
+									<div class="check-style little-check">
+		
+									</div>
+									<div class="check-style little-check style-2">
+										
+									</div>
 								</div>
-								<img src="./img/products (compressed)/merak-product-4-1-min.jpg" alt="">
-							</div>
-						</div>
-						<div class="product-text">
-							<div class="title-check">
-								<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
-								<div class="check-style little-check">
-	
+								<div class="price-product primary-color">
+									$142.50
 								</div>
-								<div class="check-style little-check style-2">
-									
-								</div>
-							</div>
-							<div class="price-product primary-color">
-								$142.50
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--ITEM 5-->
-				<div class="custom-col-20">
-					<div class="product-wrapper">
-						
-						<div class="img-wrapper">
-							<a href="#"></a>
-							<img src="./img/products (compressed)/merak-product-10-1-min.jpg" alt="">
-							<div class="img-inner-block-product">
-								<div class="inner-panel">
-									<button class="respon-btn-plus">+</button>
-									<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
-									
-									<button class="center-icon img-inner-btn ">
-										<i class="fal fa-heart"></i>
-									</button>
+					<!--ITEM 3-->
+					<div class="custom-col-20 swiper-slide">
+						<div class="product-wrapper">
+							
+							<div class="img-wrapper">
+								<a href="#"></a>
+								<img src="./img/products (compressed)/merak-product-6-0-min.jpg" alt="">
+								<div class="img-inner-block-product">
+									<div class="inner-panel">
+										<button class="respon-btn-plus">+</button>
+										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
+										
+										<button class="center-icon img-inner-btn ">
+											<i class="fal fa-heart"></i>
+										</button>
+									</div>
+									<img src="./img/products (compressed)/merak-product-6-1-min.jpg" alt="">
 								</div>
-								<img src="./img/products (compressed)/merak-product-10-0-min.jpg" alt="">
+							</div>
+							<div class="product-text">
+								<div class="title-check">
+									<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
+									<div class="check-style little-check">
+		
+									</div>
+									<div class="check-style little-check style-2">
+										
+									</div>
+								</div>
+								<div class="price-product primary-color">
+									$142.50
+								</div>
 							</div>
 						</div>
-						<div class="product-text">
-							<div class="title-check">
-								<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
-								<div class="check-style little-check">
-	
-								</div>
-								<div class="check-style little-check style-2">
-									
+					</div>
+					<!--ITEM 4-->
+					<div class="custom-col-20 swiper-slide">
+						<div class="product-wrapper">
+							
+							<div class="img-wrapper">
+								<a href="#"></a>
+								<img src="./img/products (compressed)/merak-product-4-2-min.jpg" alt="">
+								<div class="img-inner-block-product">
+									<div class="inner-panel">
+										<button class="respon-btn-plus">+</button>
+										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
+										
+										<button class="center-icon img-inner-btn ">
+											<i class="fal fa-heart"></i>
+										</button>
+									</div>
+									<img src="./img/products (compressed)/merak-product-4-1-min.jpg" alt="">
 								</div>
 							</div>
-							<div class="price-product primary-color">
-								$142.50
+							<div class="product-text">
+								<div class="title-check">
+									<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
+									<div class="check-style little-check">
+		
+									</div>
+									<div class="check-style little-check style-2">
+										
+									</div>
+								</div>
+								<div class="price-product primary-color">
+									$142.50
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--ITEM 5-->
+					<div class="custom-col-20 swiper-slide">
+						<div class="product-wrapper">
+							
+							<div class="img-wrapper">
+								<a href="#"></a>
+								<img src="./img/products (compressed)/merak-product-10-1-min.jpg" alt="">
+								<div class="img-inner-block-product">
+									<div class="inner-panel">
+										<button class="respon-btn-plus">+</button>
+										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
+										
+										<button class="center-icon img-inner-btn ">
+											<i class="fal fa-heart"></i>
+										</button>
+									</div>
+									<img src="./img/products (compressed)/merak-product-10-0-min.jpg" alt="">
+								</div>
+							</div>
+							<div class="product-text">
+								<div class="title-check">
+									<h6 class="style-name"><a href="#">Dress with a floral print</a></h6>
+									<div class="check-style little-check">
+		
+									</div>
+									<div class="check-style little-check style-2">
+										
+									</div>
+								</div>
+								<div class="price-product primary-color">
+									$142.50
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1030,83 +1043,84 @@
 				</p>
 			</div>
 
-			<div class="row arrows">
-				<div class="arr-left">
-					<i class="far fa-chevron-left"></i>
+			<div class="row arrows swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 3}'>
+				<div class="swiper-button-next sw-arr-right">
 				</div>
-				<div class="arr-right">
-					<i class="fal fa-chevron-right"></i>
+				<div class="swiper-button-prev sw-arr-left">
 				</div>
-				<!--ITEM 1-->
-				<div class="col-lg-4">
-					<div class="info-box info-box-verical rev-info-box">
-						<div class="user-info">
-							<div class="user-photo">
-								<a href="#"></a>
-								<img src="./img/merak-testimonials-2.jpg" alt="">
-							</div>
-							<div class="user-title">
-								<h5 class="user-name"><a href="#">Jennie Edwards</a></h5>
-								<p class="user-position">
-									Customer
-								</p>
-							</div>
-						</div>
-						<p class="info-text">
-							Adapted as smiling of females 
-							oh me journey exposed concern. 
-							Met come add cold calm rose mile 
-							what. Tiled manor court built.
-						</p>
-					</div>
-				</div>
-				<!--ITEM 2-->
-				<div class="col-lg-4">
-					<div class="info-box info-box-verical rev-info-box">
-						<div class="user-info">
-							<div class="user-photo">
-								<a href="#"></a>
-								<img src="./img/merak-testimonials-3.jpg" alt="">
-							</div>
-							<div class="user-title">
-								<h5 class="user-name"><a href="#">Jennie Edwards</a></h5>
-								<p class="user-position">
-									Customer
-								</p>
-							</div>
-						</div>
-						<p class="info-text">
-							Adapted as smiling of females 
-							oh me journey exposed concern. 
-							Met come add cold calm rose mile 
-							what. Tiled manor court built.
-						</p>
-					</div>
-				</div>
-				<!--ITEM 3-->
-				<div class="col-lg-4">
-					<div class="info-box info-box-verical rev-info-box">
-						<div class="user-info">
-							<div class="user-photo">
-								<a href="#"></a>
-								<img src="./img/merak-testimonials-4.jpg" alt="">
-							</div>
-							<div class="user-title">
-								<h5 class="user-name"><a href="#">Jennie Edwards</a></h5>
-								<p class="user-position">
-									Customer
-								</p>
-							</div>
-						</div>
-						<p class="info-text">
-							Adapted as smiling of females 
-							oh me journey exposed concern. 
-							Met come add cold calm rose mile 
-							what. Tiled manor court built.
-						</p>
-					</div>
-				</div>
+				<div class="swiper-wrapper">
 
+					<!--ITEM 1-->
+					<div class="col-lg-4 swiper-slide">
+						<div class="info-box info-box-verical rev-info-box">
+							<div class="user-info">
+								<div class="user-photo">
+									<a href="#"></a>
+									<img src="./img/merak-testimonials-2.jpg" alt="">
+								</div>
+								<div class="user-title">
+									<h5 class="user-name"><a href="#">Jennie Edwards</a></h5>
+									<p class="user-position">
+										Customer
+									</p>
+								</div>
+							</div>
+							<p class="info-text">
+								Adapted as smiling of females 
+								oh me journey exposed concern. 
+								Met come add cold calm rose mile 
+								what. Tiled manor court built.
+							</p>
+						</div>
+					</div>
+					<!--ITEM 2-->
+					<div class="col-lg-4 swiper-slide">
+						<div class="info-box info-box-verical rev-info-box">
+							<div class="user-info">
+								<div class="user-photo">
+									<a href="#"></a>
+									<img src="./img/merak-testimonials-3.jpg" alt="">
+								</div>
+								<div class="user-title">
+									<h5 class="user-name"><a href="#">Jennie Edwards</a></h5>
+									<p class="user-position">
+										Customer
+									</p>
+								</div>
+							</div>
+							<p class="info-text">
+								Adapted as smiling of females 
+								oh me journey exposed concern. 
+								Met come add cold calm rose mile 
+								what. Tiled manor court built.
+							</p>
+						</div>
+					</div>
+					<!--ITEM 3-->
+					<div class="col-lg-4 swiper-slide">
+						<div class="info-box info-box-verical rev-info-box">
+							<div class="user-info">
+								<div class="user-photo">
+									<a href="#"></a>
+									<img src="./img/merak-testimonials-4.jpg" alt="">
+								</div>
+								<div class="user-title">
+									<h5 class="user-name"><a href="#">Jennie Edwards</a></h5>
+									<p class="user-position">
+										Customer
+									</p>
+								</div>
+							</div>
+							<p class="info-text">
+								Adapted as smiling of females 
+								oh me journey exposed concern. 
+								Met come add cold calm rose mile 
+								what. Tiled manor court built.
+							</p>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</section> <!--/.REVIEWS-->
@@ -1128,121 +1142,123 @@
 				</p>
 			</div>
 
-			<div class="row">
-				<!--ITEM 1-->
-				<div class="col-lg-4">
-					<article class="inner-article text-center">
-						<div class="art-img">
-							<a href="#"></a>
-							<div class="img-scale">
-								<img src="./img/merak-blog-1.jpg" alt="" srcset="">
-							</div>
-						</div>
-						<div class="artic-category">
-							Category
-						</div>
-						<div class="artic-text">
-							<h5 class="blog-title">
-								Title for the blog, <br>
-								and the second line is here.
-							</h5>
-							<div class="date">
-								<span class="date-text">Mar 07, 2021 • 7 Mins Reading</span>
-								<span class="date-text">
-									<img class="author" src="./img/merak-testimonials-3.jpg" alt="">
-									By
-								</span>
-								<span>Mr. Mackay</span>
-							</div>
-							<footer class="article-footer">
-								<div class="continue">
-									<a href="#">
-										Continue reading
-										<i class="fal fa-arrow-right continue-arrow"></i>
-									</a>
-									
+			<div class="row swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 3}'>
+				<div class="swiper-wrapper">
+					<!--ITEM 1-->
+					<div class="col-lg-4 swiper-slide">
+						<article class="inner-article text-center">
+							<div class="art-img">
+								<a href="#"></a>
+								<div class="img-scale">
+									<img src="./img/merak-blog-1.jpg" alt="" srcset="">
 								</div>
-							</footer>
-						</div>
-					</article>
-				</div>
-
-				<!--ITEM 2-->
-				<div class="col-lg-4">
-					<article class="inner-article text-center">
-						<div class="art-img">
-							<a href="#"></a>
-							<div class="img-scale">
-								<img src="./img/merak-blog-2.jpg" alt="" srcset="">
 							</div>
-						</div>
-						<div class="artic-category">
-							Category
-						</div>
-						<div class="artic-text">
-							<h5 class="blog-title">
-								Title for the blog, <br>
-								and the second line is here.
-							</h5>
-							<div class="date">
-								<span class="date-text">Mar 07, 2021 • 7 Mins Reading</span>
-								<span class="date-text">
-									<img class="author" src="./img/merak-testimonials-3.jpg" alt="">
-									By
-								</span>
-								<span>Mr. Mackay</span>
+							<div class="artic-category">
+								Category
 							</div>
-							<footer class="article-footer">
-								<div class="continue">
-									<a href="#">
-										Continue reading
-										<i class="fal fa-arrow-right continue-arrow"></i>
-									</a>
-									
-								</div>
-							</footer>
-						</div>
-					</article>
-				</div>
-
-				<!--ITEM 3-->
-				<div class="col-lg-4">
-					<article class="inner-article text-center">
-						<div class="art-img">
-							<a href="#"></a>
-							<div class="img-scale">
-								<img src="./img/merak-blog-3.jpg" alt="" srcset="">
-							</div>
-						</div>
-						<div class="artic-category">
-							Category
-						</div>
-						<div class="artic-text">
-							<h5 class="blog-title">
-								<a href="#">
+							<div class="artic-text">
+								<h5 class="blog-title">
 									Title for the blog, <br>
 									and the second line is here.
-								</a>
-							</h5>
-							<div class="date">
-								<span class="date-text">Mar 07, 2021 • 7 Mins Reading</span>
-								<span class="date-text">
-									<img class="author" src="./img/merak-testimonials-3.jpg" alt="">
-									By
-								</span>
-								<span>Mr. Mackay</span>
-							</div>
-							<footer class="article-footer">
-								<div class="continue">
-									<a href="#">
-										Continue reading
-										<i class="fal fa-arrow-right continue-arrow"></i>
-									</a>
-									
+								</h5>
+								<div class="date">
+									<span class="date-text">Mar 07, 2021 • 7 Mins Reading</span>
+									<span class="date-text">
+										<img class="author" src="./img/merak-testimonials-3.jpg" alt="">
+										By
+									</span>
+									<span>Mr. Mackay</span>
 								</div>
-							</footer>
-						</div>
-					</article>
+								<footer class="article-footer">
+									<div class="continue">
+										<a href="#">
+											Continue reading
+											<i class="fal fa-arrow-right continue-arrow"></i>
+										</a>
+										
+									</div>
+								</footer>
+							</div>
+						</article>
+					</div>
+
+					<!--ITEM 2-->
+					<div class="col-lg-4 swiper-slide">
+						<article class="inner-article text-center">
+							<div class="art-img">
+								<a href="#"></a>
+								<div class="img-scale">
+									<img src="./img/merak-blog-2.jpg" alt="" srcset="">
+								</div>
+							</div>
+							<div class="artic-category">
+								Category
+							</div>
+							<div class="artic-text">
+								<h5 class="blog-title">
+									Title for the blog, <br>
+									and the second line is here.
+								</h5>
+								<div class="date">
+									<span class="date-text">Mar 07, 2021 • 7 Mins Reading</span>
+									<span class="date-text">
+										<img class="author" src="./img/merak-testimonials-3.jpg" alt="">
+										By
+									</span>
+									<span>Mr. Mackay</span>
+								</div>
+								<footer class="article-footer">
+									<div class="continue">
+										<a href="#">
+											Continue reading
+											<i class="fal fa-arrow-right continue-arrow"></i>
+										</a>
+										
+									</div>
+								</footer>
+							</div>
+						</article>
+					</div>
+
+					<!--ITEM 3-->
+					<div class="col-lg-4 swiper-slide">
+						<article class="inner-article text-center">
+							<div class="art-img">
+								<a href="#"></a>
+								<div class="img-scale">
+									<img src="./img/merak-blog-3.jpg" alt="" srcset="">
+								</div>
+							</div>
+							<div class="artic-category">
+								Category
+							</div>
+							<div class="artic-text">
+								<h5 class="blog-title">
+									<a href="#">
+										Title for the blog, <br>
+										and the second line is here.
+									</a>
+								</h5>
+								<div class="date">
+									<span class="date-text">Mar 07, 2021 • 7 Mins Reading</span>
+									<span class="date-text">
+										<img class="author" src="./img/merak-testimonials-3.jpg" alt="">
+										By
+									</span>
+									<span>Mr. Mackay</span>
+								</div>
+								<footer class="article-footer">
+									<div class="continue">
+										<a href="#">
+											Continue reading
+											<i class="fal fa-arrow-right continue-arrow"></i>
+										</a>
+										
+									</div>
+								</footer>
+							</div>
+						</article>
+					</div>
 				</div>
 
 			</div>
@@ -1435,6 +1451,7 @@
 
 	<script src="./js/jquery-3.6.0.min.js"></script>
 	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/isotope.pkgd.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 </html>

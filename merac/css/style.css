@@ -3125,6 +3125,32 @@ small {
   margin: 0;
 }
 
+.arrow-mini {
+  --swiper-navigation-size: 15px;
+  outline: 0;
+}
+
+.sw-arr-right,
+.sw-arr-left {
+  --swiper-navigation-size: 22px ;
+  outline: 0;
+}
+
+.sw-arr-right {
+  right: 0;
+}
+
+.sw-arr-left {
+  left: 0;
+}
+
+.tabs-item {
+  display: none;
+}
+.tabs-item.active {
+  display: block;
+}
+
 @media (max-width: 1025px) {
   .header-top,
 .header-bottom,
