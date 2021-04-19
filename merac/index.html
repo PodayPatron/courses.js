@@ -83,7 +83,7 @@
 
 						<div class="info-box sign-box">
 							<i class="icons-main-header fal fa-user-alt"></i>
-							<div>Login / Register</div>
+							<div ><a class="subscribe-link" href=".login-form">Login / Register</a></div>
 						</div>
 						<div class="info-box sign-box">
 							<i class="icons-main-header far fa-heart"></i>
@@ -739,7 +739,7 @@
 								</h4>
 							</div>
 							<div class="btn-block">
-								<a class="btn popup-btn btn-mini-long" href=".open-pop">To Shop</a>
+								<a class="btn popup-btn btn-mini-long" href=".open-pop" data-toggle="tooltip"  title="Tooltip">To Shop</a>
 							</div>
 						</div>
 
@@ -1286,7 +1286,7 @@
 							taken possession of my 
 							entire soul.
 						</p>
-						<a class="btn btn-mini-long-xl color-scheme-white-btn  sub-btn" href="#">Subscribe</a>
+						<a class="btn btn-mini-long-xl color-scheme-white-btn  sub-btn" href="#" data-toggle="tooltip"  title="Tooltip">Subscribe</a>
 					</div>
 				</div>
 
@@ -1376,7 +1376,7 @@
 				<div class="col-lg-6 col-md-12">
 					<form class="pre-foot-form" action="">
 						<input placeholder="Your Email Address" type="text" name="" id="">
-						<input value="Subscribe" type="submit" value="">
+						<input value="Subscribe" type="submit" value="" data-toggle="tooltip"  title="Tooltip">
 					</form>
 				</div>
 			</div>
@@ -1421,7 +1421,7 @@
 				</div>
 
 				<div class="col-lg-4">
-					<h4 class="phone">
+					<h4 class="phone" data-toggle="tooltip"  title="Tooltip">
 						+453 211 41 38
 					</h4>
 					<p class="adress">
@@ -1439,7 +1439,7 @@
 			</div>
 		</div>
 	</footer>
-	<div class=" mfp-bg mfp-hide open-pop">
+	<div class=" mfp-bg mfp-hide open-pop popup center ">
 		<div class="popup">
 			<div class="row">
 				<div class="col-lg-6">
@@ -1456,6 +1456,16 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="login-form mfp-bg right mfp-hide ">
+		<form class="log-pass-form" action="">
+			<label for="">Username or email *</label>
+			<input type="text" name="" id="">
+			<label for="">Password *</label>
+			<input type="password" name="" id="">
+			<button>Subscribe</button>
+		</form>
+	</div>
 	
 
 	<div class="to-top">
@@ -1470,6 +1480,7 @@
 	<script src="./js/jquery-3.6.0.min.js"></script>
 	<script src="./js/popup.js"></script>
 	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/bootstrap.bundle.js"></script>
 	<script src="./js/isotope.pkgd.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>

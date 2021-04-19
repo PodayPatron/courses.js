@@ -50,8 +50,12 @@ function popup() {
 	$('.popup-btn').magnificPopup({
 		type:'inline',
 		closeBtnInside: true,
-		//closeOnContentClick: true,
-		
+	});
+
+	$('.subscribe-link').magnificPopup({
+		type:'inline',
+		closeBtnInside: true,
+		closeOnBgClick: true,
 	});
 }
 
@@ -112,9 +116,14 @@ function tabs() {
 	});
 }
 
+function tooltipsInit() {
+	$('[data-toggle="tooltip"]').tooltip();
+}
+
 
 sliderAll();
 toTop();
 popup();
 tabsIsotope();
 tabs();
+tooltipsInit();

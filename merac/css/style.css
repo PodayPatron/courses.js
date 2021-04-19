@@ -1846,6 +1846,29 @@ small {
   color: #ffffff;
 }
 
+.log-pass-form {
+  width: 400px;
+  padding: 50px;
+  background-color: #b10d0d;
+}
+.log-pass-form label {
+  color: #fff;
+}
+.log-pass-form input {
+  margin-bottom: 20px;
+}
+.log-pass-form input:last-child {
+  margin-bottom: 0;
+}
+.log-pass-form button {
+  width: 100%;
+  transition: 0.2s linear all;
+}
+.log-pass-form button:hover {
+  background-color: #a38080;
+  color: #fff;
+}
+
 .header-top,
 .header-main {
   font-size: 13px;
@@ -2639,6 +2662,7 @@ small {
 
 .promo {
   overflow-x: hidden;
+  margin-bottom: 60px;
 }
 
 .custom-row {
