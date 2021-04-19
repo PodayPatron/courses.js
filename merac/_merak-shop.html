@@ -271,13 +271,12 @@
 						<i class="fal fa-bars"></i>
 						<h6>Filter by</h6>
 					</div>
-					<ul class="tabs-menu produc-tabs-menu">
-						<li class="active"><a href="#">All</a></li>
-						<li><a href="#">New</a></li>
-						<li><a href="#">Bestseller</a></li>
-						<li><a href="#">Discount</a></li>
-						<li><a href="#">Loafers</a></li>
-						<li><a href="#">Bags</a></li>
+					<ul class="tabs-menu produc-tabs-menu ">
+						<li class="active" data-filter="*"><a href="#">All</a></li>
+						<li data-filter=".metal"><a href="#">New</a></li>
+						<li data-filter=".transition"><a href="#" >Bestseller</a></li>
+						<li data-filter=".universo"><a href="#">Discount</a></li>
+						<li data-filter=".paisagem"><a href="#">Discount</a></li>
 					</ul>
 				</div>
 				<div class="products-view">
@@ -313,9 +312,9 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row grid">
 				<!--ITEM 1-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item transition  metal">
 					<div class="product-wrapper">
 						
 						<div class="img-wrapper">
@@ -352,7 +351,7 @@
 					</div>
 				</div>
 				<!--ITEM 2-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item transition  metal">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -383,7 +382,7 @@
 					</div>
 				</div>
 				<!--ITEM 3-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item transition " >
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -402,7 +401,7 @@
 								<img src="./img/products (compressed)/merak-product-14-1-min.jpg" alt="">
 							</div>
 						</div>
-						<div class="product-text">
+						<div class="product-text ">
 							<div class="title-check">
 								<h6 class="style-name"><a href="#">Green lase dress</a></h6>
 								<div class="check-style little-check">
@@ -422,7 +421,7 @@
 					</div>
 				</div>
 				<!--ITEM 4-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item transition" >
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -453,7 +452,7 @@
 					</div>
 				</div>
 				<!--ITEM 5-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item transition " >
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -484,7 +483,7 @@
 					</div>
 				</div>
 				<!--ITEM 6-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item  paisagem" >
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -515,7 +514,7 @@
 					</div>
 				</div>
 				<!--ITEM 7-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item  universo" >
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -546,7 +545,7 @@
 					</div>
 				</div>
 				<!--ITEM 8-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item paisagem" >
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -578,7 +577,7 @@
 				</div>
 
 				<!--ITEM 9-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item transition ">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -609,7 +608,7 @@
 					</div>
 				</div>
 				<!--ITEM 10-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item  metal">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -640,7 +639,7 @@
 					</div>
 				</div>
 				<!--ITEM 11-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item  metal">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -671,7 +670,7 @@
 					</div>
 				</div>
 				<!--ITEM 12-->
-				<div class="col-lg-3">
+				<div class="col-lg-3 element-item universo">
 					<div class="product-wrapper">
 						<div class="img-wrapper">
 							<a href="#"></a>
@@ -817,4 +816,10 @@
 		</div>
 	</div>
 
+
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script src="./js/popup.js"></script>
+	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/isotope.pkgd.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>	

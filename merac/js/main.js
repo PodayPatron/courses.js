@@ -6,7 +6,6 @@ function sliderAll() {
 	});
 
 	function renderSlider(data) {
-		
 		var config = {
 			loop : data.loop,
 			slidesPerView : data.slidesPerView,
@@ -43,11 +42,38 @@ function sliderAll() {
 				},
 			}
 		}
-		console.log(config);
 		return config;
 	}
 }
 
+function popup() {
+	$('.popup-btn').magnificPopup({
+		type:'inline',
+		closeBtnInside: true,
+		//closeOnContentClick: true,
+		
+	});
+}
+
+function tabsIsotope() {
+	var $grid = new Isotope('.grid', {
+		itemSelector: '.element-item',
+		layoutMode: 'fitRows'
+	});
+
+	$('.produc-tabs-menu').on( 'click', 'li', function(e) {
+		e.preventDefault();
+
+		var filterValue = $(this).data('filter');
+
+		$(this).siblings().removeClass('active');
+		$(this).addClass('active');
+
+		$grid.arrange({
+			filter : filterValue,
+		});
+	});
+}
 
 function toTop() {
 	var $toTop = $('.to-top');
@@ -89,4 +115,6 @@ function tabs() {
 
 sliderAll();
 toTop();
+popup();
+tabsIsotope();
 tabs();
