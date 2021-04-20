@@ -1844,12 +1844,13 @@ small {
 }
 .popup .popup-text {
   color: #ffffff;
+  padding: 15px;
 }
 
 .log-pass-form {
   width: 400px;
   padding: 50px;
-  background-color: #b10d0d;
+  background-color: #454545;
 }
 .log-pass-form label {
   color: #fff;
@@ -1867,6 +1868,42 @@ small {
 .log-pass-form button:hover {
   background-color: #a38080;
   color: #fff;
+}
+
+.mfp-zoom-in {
+  /* animate in */
+  /* animate out */
+}
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-zoom-in.mfp-removing mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.mfp-zoom-in.mfp-removing .mfp-bg {
+  opacity: 0;
+}
+
+.animateMe {
+  opacity: 0;
+}
+
+.animateMe .animated {
+  opacity: 1;
 }
 
 .header-top,

@@ -7,12 +7,15 @@
 	<title>Merak</title>
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Rubik:wght@500&family=Spartan:wght@500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/animate.min.css">
+	<link rel="stylesheet" href="./css/magnific-popup.css">
+	<link rel="stylesheet" href="./css/photoswipe.css">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="./css/style.css">	
-	<link rel="stylesheet" href="./css/magnific-popup.css">
+
 </head>
 <body>
-	<header class="header-general">
+	<header class="header-general animateMe" data-animation="bounceIn">
 		<!-- HEADER TOP-->
 		<div class="header-top header-row bg-red color-scheme-light">
 			<div class="container">
@@ -61,7 +64,7 @@
 					<div class="header-col-center">
 
 						<form class="header-search flex-align" action="">
-							<button class="form-btn center-icon">
+							<button class="form-btn center-icon" data-toggle="tooltip"  title="Tooltip">
 								<i class="fal fa-search"></i>
 							</button>
 							<input placeholder="Search for products" type="text" name="" id="">
@@ -83,7 +86,7 @@
 
 						<div class="info-box sign-box">
 							<i class="icons-main-header fal fa-user-alt"></i>
-							<div ><a class="subscribe-link" href=".login-form">Login / Register</a></div>
+							<div ><a class="subscribe-link" data-effect="mfp-zoom-in"  href=".login-form">Login / Register</a></div>
 						</div>
 						<div class="info-box sign-box">
 							<i class="icons-main-header far fa-heart"></i>
@@ -214,7 +217,7 @@
 								</a>
 							</li>
 							<li >
-								<a href="./_merak-shop.html">
+								<a href="./merak-shop.html">
 									Shop
 									<i class="fal fa-chevron-down"></i>
 								</a></li>
@@ -245,7 +248,7 @@
 		</div>
 	</header>
 
-	<section class="intro">
+	<section class="intro animateMe" data-animation="rollIn">
 		<div class="container">
 
 			<div class="swiper-container-style">
@@ -353,7 +356,7 @@
 		</div>
 	</section> <!-- /.INTRO -->
 
-	<section class="products"> 
+	<section class="products animateMe"  data-animation="fadeInRight"> 
 		<div class="container">
 
 			<div class="main-panel">
@@ -385,10 +388,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a> 
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -421,10 +424,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -452,10 +455,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -491,10 +494,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -522,10 +525,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -553,10 +556,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -584,10 +587,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -615,10 +618,10 @@
 								<div class="inner-panel">
 									<button class="respon-btn-plus">+</button>
 									<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-search"></i>
 									</button>
-									<button class="center-icon img-inner-btn">
+									<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 										<i class="fal fa-heart"></i>
 									</button>
 								</div>
@@ -642,7 +645,7 @@
 
 	</section> <!--./Products-->
 
-	<section class="category light-background">
+	<section class="category light-background animateMe " data-animation="fadeInLeft">
 		<div class="container">
 
 			<div class="row">
@@ -672,10 +675,10 @@
 										<div class="inner-panel categ-panel">
 											<button class="respon-btn-plus">+</button>
 											<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-											<button class="center-icon img-inner-btn">
+											<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 												<i class="fal fa-search"></i>
 											</button>
-											<button class="center-icon img-inner-btn">
+											<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 												<i class="fal fa-heart"></i>
 											</button>
 										</div>
@@ -702,10 +705,10 @@
 										<div class="inner-panel ">
 											<button class="respon-btn-plus">+</button>
 											<a class="btn btn-mini btn-plus color-scheme-white-btn" href="#">Select Options</a>
-											<button class="center-icon img-inner-btn">
+											<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 												<i class="fal fa-search"></i>
 											</button>
-											<button class="center-icon img-inner-btn">
+											<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 												<i class="fal fa-heart"></i>
 											</button>
 										</div>
@@ -739,7 +742,7 @@
 								</h4>
 							</div>
 							<div class="btn-block">
-								<a class="btn popup-btn btn-mini-long" href=".open-pop" data-toggle="tooltip"  title="Tooltip">To Shop</a>
+								<a class="btn popup-btn btn-mini-long" href=".open-pop" data-effect="mfp-zoom-in"  data-toggle="tooltip"  title="Tooltip">To Shop</a>
 							</div>
 						</div>
 
@@ -767,7 +770,7 @@
 	<section class="promo">
 		<div class="container">
 
-			<div class="block-title promo-block-title text-center">
+			<div class="block-title promo-block-title text-center animateMe" data-animation="bounceIn">
 				<div class="main-subtitle promo-main-subtitle">
 					Clothes that you like
 				</div>
@@ -781,7 +784,7 @@
 				</p>
 			</div>
 
-			<div class="row arrows custom-row swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 5}'>
+			<div class="row arrows custom-row swiper-container animateMe" data-animation="rollIn"  data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 5}'>
 				<div class="swiper-button-next sw-arr-right"></div>
     			<div class="swiper-button-prev sw-arr-left"></div>
 				<div class="swiper-wrapper">
@@ -797,7 +800,7 @@
 										<button class="respon-btn-plus">+</button>
 										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
 										
-										<button class="center-icon img-inner-btn ">
+										<button class="center-icon img-inner-btn" data-toggle="tooltip"  title="Tooltip">
 											<i class="fal fa-heart"></i>
 										</button>
 									</div>
@@ -831,7 +834,7 @@
 										<button class="respon-btn-plus">+</button>
 										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
 										
-										<button class="center-icon img-inner-btn ">
+										<button class="center-icon img-inner-btn " data-toggle="tooltip"  title="Tooltip">
 											<i class="fal fa-heart"></i>
 										</button>
 									</div>
@@ -866,7 +869,7 @@
 										<button class="respon-btn-plus">+</button>
 										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
 										
-										<button class="center-icon img-inner-btn ">
+										<button class="center-icon img-inner-btn " data-toggle="tooltip"  title="Tooltip">
 											<i class="fal fa-heart"></i>
 										</button>
 									</div>
@@ -901,7 +904,7 @@
 										<button class="respon-btn-plus">+</button>
 										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
 										
-										<button class="center-icon img-inner-btn ">
+										<button class="center-icon img-inner-btn " data-toggle="tooltip"  title="Tooltip">
 											<i class="fal fa-heart"></i>
 										</button>
 									</div>
@@ -936,7 +939,7 @@
 										<button class="respon-btn-plus">+</button>
 										<a class="btn btn-extra-mini color-scheme-white-btn" href="#">Select Options</a> 
 										
-										<button class="center-icon img-inner-btn ">
+										<button class="center-icon img-inner-btn " data-toggle="tooltip"  title="Tooltip">
 											<i class="fal fa-heart"></i>
 										</button>
 									</div>
@@ -962,7 +965,7 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row animateMe" data-animation="fadeInUpBig">
 				<!--ITEM 1-->
 				<div class="col-lg-4">
 					<div class="promo-inner">
@@ -1027,7 +1030,7 @@
 		</div>
 	</section> <!--/.PROMO-->
 
-	<section class="reviews light-background">
+	<section class="reviews light-background animateMe" data-animation="bounceIn">
 		<div class="container">
 
 			<div class="block-title rev-block-title  text-center">
@@ -1044,7 +1047,7 @@
 				</p>
 			</div>
 
-			<div class="row arrows swiper-container" data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 3}'>
+			<div class="row arrows swiper-container animateMe" data-animation="rollIn"  data-option='{"loop": true, "pagination":true, "navigation":true, "slidesPerView": 3}'>
 				<div class="swiper-button-next sw-arr-right">
 				</div>
 				<div class="swiper-button-prev sw-arr-left">
@@ -1126,10 +1129,10 @@
 		</div>
 	</section> <!--/.REVIEWS-->
 
-	<section class="blog">
+	<section class="blog animateMe" data-animation="fadeInRight">
 		<div class="container">
 
-			<div class="block-title rev-block-title  text-center">
+			<div class="block-title rev-block-title  text-center animateMe" data-animation="rollIn">
 				<div class="main-subtitle promo-main-subtitle">
 					Clothes that you like
 				</div>
@@ -1266,7 +1269,7 @@
 		</div>
 	</section> <!-- /.BLOG-->
 
-	<section class="subscribe">
+	<section class="subscribe animateMe" data-animation="fadeInLeft">
 		<div class="container">
 
 			<div class="row">
@@ -1354,7 +1357,7 @@
 		</div>
 	</section> <!-- /.SUBSCRIBE-->
 
-	<section class="pre-footer">
+	<section class="pre-footer animateMe" data-animation="bounceIn">
 		<div class="container container-border-line">
 
 			<div class="row align-center">
@@ -1383,7 +1386,7 @@
 		</div>
 	</section>
 
-	<footer class="footer-general">
+	<footer class="footer-general animateMe" data-animation="rollIn">
 		<div class="container">
 
 			<div class="row ">
@@ -1457,7 +1460,7 @@
 		</div>
 	</div>
 
-	<div class="login-form mfp-bg right mfp-hide ">
+	<div class="login-form mfp-bg right mfp-hide">
 		<form class="log-pass-form" action="">
 			<label for="">Username or email *</label>
 			<input type="text" name="" id="">
@@ -1477,11 +1480,57 @@
 		</div>
 	</div>
 
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div> 
+					</div>
+
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+					</button>
+
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+					</button>
+
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="./js/jquery-3.6.0.min.js"></script>
-	<script src="./js/popup.js"></script>
-	<script src="./js/swiper-bundle.min.js"></script>
-	<script src="./js/bootstrap.bundle.js"></script>
-	<script src="./js/isotope.pkgd.min.js"></script>
+	<script src="./js/libs/popup.js"></script>
+	<script src="./js/libs/swiper-bundle.min.js"></script>
+	<script src="./js/libs/bootstrap.bundle.js"></script>
+	<script src="./js/libs/isotope.pkgd.min.js"></script>
+	<script src="./js/libs/jquery.waypoints.min.js"></script>
+	<script src="./js/libs/photoswipe.min.js"></script>
+	<script src="./js/libs/sticky-kit.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 </html>
