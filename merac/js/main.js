@@ -145,7 +145,6 @@
 			items.each(function() {
 				var $element = $(this);
 				var	$animationClass = $element.data("animation");
-				var	$animationDelay = $element.attr('data-animation-delay');
 				var trigger = (trigger) ? trigger : $element;
 
 				trigger.waypoint(function() {
