@@ -137,12 +137,12 @@
 			$('[data-toggle="tooltip"]').tooltip();
 		}
 		
-		function scrollWaypointInit(items) {
+		function scrollWaypointInit() {
 			if('undefined' === typeof $.fn.waypoint) {
 				return false;
 			}
 
-			items.each(function() {
+			$('.animateMe').each(function() {
 				var $element = $(this);
 				var	$animationClass = $element.data("animation");
 				var trigger = (trigger) ? trigger : $element;
@@ -156,6 +156,7 @@
 		}
 
 		function photoSwipe() {
+			
 			var arrPhoto = [];
 
 			$('.subscribe-inner-img').find('a').each(function() {
@@ -180,6 +181,10 @@
 		
 				var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, arrPhoto, options);
 				gallery.init();
+				
+				if('undefined' === typeof PhotoSwipe) {
+					return false;
+				}
 			});
 		}
 
@@ -188,6 +193,10 @@
 		}
 
 		function googleM() {
+			if('undefined' === typeof Maplace) {
+				return false;
+			}
+
 			new Maplace({
 				map_div: '#gmap-fusion',
 				type: 'fusion',
@@ -579,7 +588,7 @@
 		tabsIsotope();
 		tabs();
 		tooltipsInit();
-		scrollWaypointInit($('.animateMe'));
+		scrollWaypointInit();
 		photoSwipe();
 		googleM();
 		stickeMode();
