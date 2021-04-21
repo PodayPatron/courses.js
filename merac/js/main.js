@@ -593,7 +593,7 @@
 					currentFrame: 1, 
 					imgList: '.threesixty_images', 
 					progress: '.spinner',
-					imagePath:'../assets/', 
+					imagePath:'./assets/', 
 					filePrefix: '', 
 					ext: '.png',
 					height: 1000,
