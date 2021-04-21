@@ -1906,6 +1906,18 @@ small {
   opacity: 1;
 }
 
+.pswp__ui {
+  display: none;
+}
+
+.map {
+  height: 400px;
+}
+
+#gmap-fusion {
+  height: 700px;
+}
+
 .header-top,
 .header-main {
   font-size: 13px;
@@ -3190,6 +3202,7 @@ small {
 
 .shop-loop-head {
   margin-bottom: 45px;
+  height: 2000px;
 }
 
 .products-tabs {
