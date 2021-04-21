@@ -181,7 +181,7 @@
 		
 				var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, arrPhoto, options);
 				gallery.init();
-				
+
 				if('undefined' === typeof PhotoSwipe) {
 					return false;
 				}
@@ -582,6 +582,28 @@
 			}).Load();
 		}
 
+		function threeSix() {
+			window.onload = init;
+
+			var car;
+			function init(){
+				car = $('.car').ThreeSixty({
+					totalFrames: 52, 
+					endFrame: 52, 
+					currentFrame: 1, 
+					imgList: '.threesixty_images', 
+					progress: '.spinner',
+					imagePath:'../assets/', 
+					filePrefix: '', 
+					ext: '.png',
+					height: 1000,
+					width: 447,
+					navigation: true,
+					plugins: ['ThreeSixtyFullscreen']
+				});
+			}
+		}
+
 		sliderAll();
 		toTop();
 		popup();
@@ -592,5 +614,6 @@
 		photoSwipe();
 		googleM();
 		stickeMode();
+		threeSix();
 	});
 })(jQuery);
