@@ -6,7 +6,7 @@
 		function getTenCity() {
 			citiesId.forEach(function(el) {
 				$.ajax({
-					url: `http://api.openweathermap.org/data/2.5/weather?id=${el}&appid=${key}`,
+					url: `https://api.openweathermap.org/data/2.5/weather?id=${el}&appid=${key}`,
 					success: function (data) {
 						showCitiesCards(data);
 					}
@@ -39,7 +39,7 @@
 
 				if(3 <=  $searchInput.length) {
 					$.ajax({
-						url: `http://api.openweathermap.org/data/2.5/find?q=${$searchInput}&lang=ua&appid=${key}`,
+						url: `https://api.openweathermap.org/data/2.5/find?q=${$searchInput}&lang=ua&appid=${key}`,
 						success: function (data) {
 							remove();
 
@@ -79,7 +79,7 @@
 				$('.popup').html('<div class="main-carousel"></div>');
 				
 				$.ajax({
-					url: `http://api.openweathermap.org/data/2.5/forecast?id=${id}&lang=ua&appid=${key}`,
+					url: `https://api.openweathermap.org/data/2.5/forecast?id=${id}&lang=ua&appid=${key}`,
 					success: function (data) {
 						getPopupWeatherInfo(data);
 					}
