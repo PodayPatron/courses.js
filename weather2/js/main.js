@@ -51,7 +51,7 @@
 								}
 
 								$('.open-popup-link').magnificPopup({
-									removalDelay: 300,
+									removalDelay: 100,
 									type:'inline',
 									closeBtnInside: false,
 									closeOnBgClick: true,
@@ -76,6 +76,7 @@
 				var $input = $(this);
 				var id = $input.data('id');
 				remove();
+				$('.popup').html('<div class="main-carousel"></div>');
 				
 				$.ajax({
 					url: `http://api.openweathermap.org/data/2.5/forecast?id=${id}&lang=ua&appid=${key}`,
@@ -89,7 +90,7 @@
 		function getPopupWeatherInfo(data) {
 			// console.log(data);
 			for(i = 0; i < data.list.length; i++) {
-				$('.popup').append(
+				$('.popup .main-carousel').append(
 					`<div class="weather weather-width carousel-cell">
 						<h2 class="city pop-city">${data.city.name}, ${data.city.country}</h2>
 						<h2 class="pop-desk">${data.list[i].dt_txt}</h2>
@@ -104,13 +105,6 @@
 			}
 			initSlider();
 		}
-
-		// $(document).on('click', '.check-weth', function() {
-		// });
-
-		// $(document).on('click', '.carousel-cell', function() {
-			
-		// });
 
 		function sliderAll() {
 			if('undefined' === typeof Swiper) {
@@ -147,10 +141,6 @@
 		function remove() {
 			$('.input-drop-item').remove();
 		}
-
-		// function cardRemove() {
-		// 	$('.cards-wrapper').remove();
-		// }
 
 		getTenCity();
 		inputSearchCity();
