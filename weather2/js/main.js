@@ -87,7 +87,7 @@
 		}
 
 		function getPopupWeatherInfo(data) {
-			console.log(data);
+			// console.log(data);
 			for(i = 0; i < data.list.length; i++) {
 				$('.popup').append(
 					`<div class="weather weather-width carousel-cell">
