@@ -1,0 +1,161 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  font-size: 120%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8%;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 600px;
+}
+
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 40px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 550px;
+  margin: 20px;
+  height: 60px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather {
+  width: 290px;
+  height: 390px;
+  padding: 40px;
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px 3px #f8f8f8;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: .2s all linear;
+}
+
+.weather:hover {
+  background-color: rgb(184, 126, 126);
+  box-shadow: 0px 2px 8px 3px #b95050;
+  color: #fff;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.input-drop-item {
+  height: 40px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #7c7c7c2b;
+  cursor: pointer;
+}
+
+.input-drop-item:hover {
+  background-color: rgb(78, 125, 228);
+  color: #fff;
+}
+
+.input-drop {
+  position: absolute;
+  top: 110px;
+  background: #000000d0;
+  display: flex;
+  flex-direction: column;
+  width: 490px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 17px 5px #723131;
+  z-index: 1000;
+}
+
+.weather-width {
+  width: 90%;
+}
+
+.pop-city {
+  font-size: 18px;
+}
+
+.pop-desk {
+  font-size: 16px;
+}
